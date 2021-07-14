@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>NEW-WEB</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+    <div class="box-1">
+     <div class="content-holder">
+         <img src="download.jpg">
+         <h1>WELCOME BACK!</h1>
+         <h5>To keep connected with us please login with your personal info</h5>
+         <button class="button-1" onclick="signup()">SIGN-UP</button>
+         <br/>
+         <button class="button-2" onclick="signin()">SIGN-IN</button>
+     </div>
+    </div>
+    <!--FORM DIV-->
+    <div class="box-2">
+     <div class="login-form-container">
+         <h1>LOGIN FORM</h1>
+             <a href="https://www.youtube.com/channel/UC_geCGlltfP0T5_v0LO92wQ" class="fa fa-facebook"></a>
+               <a href="https://www.youtube.com/channel/UC_geCGlltfP0T5_v0LO92wQ/videos" class="fa fa-twitter"></a>
+               <a href="https://www.youtube.com/channel/UC_geCGlltfP0T5_v0LO92wQ/playlists" class="fa fa-google-plus"></a>
+               <a href="https://www.linkedin.com/in/venkatesan-chandirasekar-594592102/" class="fa fa-linkedin"></a><br/>
+            
+               <p style="color: black;text-align: center;">OR LOGIN WITH</p><br/>
+         <div>
+            <input class="input-field-1" type="email" onkeyup="validateEmail1()" autocomplete="off" placeholder="Email" id="email1" value=""/>
+            <label style="color: red;display: none;" id="email1Error">Please enter valid email</label>                  
+         </div><br/>
+         <div>
+            <input class="input-field-1" type="password" onkeyup="validatePwd1()" placeholder="Password" id="password1" value=""/>
+            <label style="color: red;display: none;" id="password1Error">Wrong Password</label>
+         </div><br/>
+         <button class="login-button"id="Btn" onclick="save(),next()">LOGIN</button>
+     </div>
+
+     <!--CREATING SIGNUP PAGE-->
+     <div class="signup-form-container">
+        <h1>SIGN-UP FORM</h1>
+          <div class="social">
+            <a href="https://www.youtube.com/channel/UC_geCGlltfP0T5_v0LO92wQ" class="fa fa-facebook"></a>
+            <a href="https://www.youtube.com/channel/UC_geCGlltfP0T5_v0LO92wQ/videos" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/channel/UC_geCGlltfP0T5_v0LO92wQ/playlists" class="fa fa-google-plus"></a>
+            <a href="https://www.linkedin.com/in/venkatesan-chandirasekar-594592102/" class="fa fa-linkedin"></a><br/>
+            </div>  
+           
+              <p style="color: black;text-align: center;">OR LOGIN WITH</p><br/>
+         <div>
+             <input type="text" placeholder="FIRST NAME"class="input-field-1" onkeyup="Fname()" value="" id="name" name="firstname" style="width: 400px;">
+             <label style="color:red;display:none;"id="noname"> First name is Required</label>
+             <label style="color: red; display: none;" id ="error">First name should be minimum 6 character</label>
+        </div><br/>
+        <div>
+            <input type="number" placeholder="MOBILE NUMBER" onkeyup="mobile();" id="number" class="input-field-1">
+            <label style="color: red; display:none;"id = "numerr">Enter your Phone Number</label>
+            <label style="color: red; display:none;"id = "count">Number should not be above 10</label>
+            </div><br/>
+         <div>
+             <input type="email" placeholder="USER-EMAIL" class="input-field-1"onkeyup="email();" value="" id ="email">
+             <label style="color:red;display:none;"id="Eemail">Email is invalid</label> 
+         </div><br/>
+        <div>
+            <input type="password" placeholder="PASSWORD" class="input-field-1" onkeyup="pass();" value="" id="password">
+            <label style="color: red;display: none;" id="passE">Please enter valid password</label>
+                    <label style="color: red;display: none;" id="passC">password should be 15 digits</label>
+        </div><br/>
+        <div>
+            <input type="text" placeholder="ADDRESS" class="input-field-1"id="address" onkeyup="address()" cols="30" rows="5">
+            <label style="color:red;display:none;"id="noadress"> Address is Required</label>
+        </div><br/>
+        <div style="text-align: center;">Gender:
+            <input type="radio" id="male" name="Gender" value="Male">Male
+            <input type="radio" id="female" name="Gender" value="Female">Female
+            <input type="radio" id="others" name="Gender" value="others">others                   
+        </div>
+
+        <input id="image" type="file" name="image" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"required>
+        <img id=""  width="50" height="50" /><br/>
+
+        <button class="signup-button" id="Btn" onclick="next()" onkeyup="check()">SIGN-UP</button>
+    </div>
+    </div>
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!--JAVASCRIPT-->
+<script>
+    var check=0;
+ function signup(){
+     document.querySelector(".login-form-container").style.cssText="display:none";
+     document.querySelector(".signup-form-container").style.cssText="display: block";
+     document.querySelector(".button-2").style.cssText="display: block";
+     document.querySelector(".button-1").style.cssText="display: none";
+     
+ }
+ function signin(){
+     document.querySelector(".signup-form-container").style.cssText="display:none";
+     document.querySelector(".login-form-container").style.cssText="display: block";
+     document.querySelector(".button-1").style.cssText="display: block";
+     document.querySelector(".button-2").style.cssText="display: none";
+     
+ }
+ function Fname(){
+            var firstname=document.getElementById("name").value;
+        if(firstname){
+        if(firstname.length< 5){
+            document.getElementById("name").style=" width:400px;"
+            document.getElementById('noname').style="display:none;color:red;"     
+            document.getElementById("error").style="display:block;color:red;"
+        }
+        else{
+            document.getElementById("name").style=" width:400px;"
+            document.getElementById("error").style="display:none;color:red;"
+            check ++;
+        }
+    } 
+     else {
+        document.getElementById("name").style="width:400px;"
+        document.getElementById('noname').style="display:block;color:red;"
+        document.getElementById("error").style="display:none;color:red;"
+     }
+     
+        }
+    function mobile(){ var number = document.getElementById('number').value;
+        var numberPattern = /^[0-9]+$/;
+        if(number.match(numberPattern)){
+            document.getElementById('numerr').style="display:none";
+            document.getElementById('count').style="color:red; display:none;";
+
+        }
+        else{
+            document.getElementById('numerr').style="border:1px solid red; width:278px; height:33px";
+            document.getElementById('numerr').style="color:red; display:block;";
+            document.getElementById('count').style="color:red; display:none;";
+        }
+        if(number.length>10){
+            document.getElementById('count').style="border:1px solid red; width:278px; height:33px";
+            document.getElementById('count').style="color:red; display:block;";
+            document.getElementById('numerr').style="color:red; display:none;";
+            check++;
+        }
+    }
+        function email () {
+            var email = document.getElementById('email').value;
+        var emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(emailPattern.test(email)){
+            document.getElementById('Eemail').style="display:none";
+        }
+        else{
+            document.getElementById('Eemail').style="border:1px solid red; width:278px; height:33px";
+            document.getElementById('Eemail').style="color:red; display:block;";
+            check++;  
+        }
+        }
+        function pass(){
+            var password = document.getElementById('password').value;
+        var pwdPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if(password.match(pwdPattern)){
+            document.getElementById('passE').style="display:none;";
+            document.getElementById('passC').style="display:none;";
+        }
+        else{
+            document.getElementById('passdE').style="border:1px solid red; width:278px; height:33px;";            
+            document.getElementById('passE').style="color:red; display:block;";
+            document.getElementById('passC').style="display:none;";
+            check++;
+        }
+        if(password.length < 15){
+            document.getElementById('passC').style="border:1px solid red; width:278px; height:33px;";            
+            document.getElementById('passC').style="color:red; display:block;";
+            document.getElementById('passE').style="display:none;";
+        }
+        else{
+            document.getElementById('passE').style="display:none;";
+            document.getElementById('passC').style="display:none;";
+
+        }
+        if(password.length > 15){
+            document.getElementById('passC').style="border:1px solid red; width:278px; height:33px;";            
+            document.getElementById('passC').style="color:red; display:block;";
+            document.getElementById('passE').style="display:none;";
+        }
+        }
+   
+        function address(){
+           var addres= document.getElementById("address").value;
+           if(addres){
+               if(addres.length<10){
+                   document.getElementById("noadress").style="display:block;color:red;"
+                   document.getElementById("address").style="border:1px solid red;"
+
+               }
+               else{
+                check ++;
+                document.getElementById("noadress").style="display:none;color:red;"
+                document.getElementById("address").style="border:1px solid black;"
+               }
+           }
+
+        }
+
+        function next(){
+          save();
+          get();
+        }
+        
+        function validateEmail1(){
+        var email1 = document.getElementById('email1').value;
+        var emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(emailPattern.test(email1)){
+            document.getElementById('email1Error').style="display:none";
+        }
+        else{
+            document.getElementById('email1Error').style="border:1px solid red; width:278px; height:33px";
+            document.getElementById('email1Error').style="color:red; display:block;";  
+        }
+    }
+    
+    function save(){
+        window.location.href="home.html";
+    }
+    function get(){
+        var name = document.getElementById('name').value;
+        var realName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+        var number = document.getElementById('number').value;
+        var email = document.getElementById('email').value;
+        
+        var address = document.getElementById('address').value;
+        var realAddress = address.trim();
+        var male=document.getElementById("male").checked;
+        var female=document.getElementById("female").checked;
+        if(check >= 4){
+            var name = localStorage.setItem('name',realName);
+            var number = localStorage.setItem('number',number);
+            var email = localStorage.setItem('email',email);
+            
+            var address = localStorage.setItem('address',realAddress);
+            if(male ==true){
+                localStorage.setItem("gender","male");
+            }
+            else{
+                localStorage.setItem("gender","female");
+            }
+        }
+        document.getElementById("div2").style="display:block";
+        document.getElementById("div1").style="display:none;";
+        
+    }
+</script>
