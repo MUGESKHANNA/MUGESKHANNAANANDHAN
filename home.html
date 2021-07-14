@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HOME</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <h1 class="box">DR.APJ KALAM DREAMS</h1>
+        <form class="d-flex">
+          <h3 style="color: royalblue; font-size: small;" id="date">Last logged in:</h3><br>
+        </form>
+      </div>
+    </nav>
+    <!--SLIDER-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="BAN1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="BAN2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="BAN3.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
+    <!--GRID-->
+    <p class="mas">ABOUT US</p>
+    <div class="container-2">
+      <div class="row">
+        <div class="col">
+        <img src="venky.jpg" class="master">
+        </div>
+        <div class="col">
+          <p class="abt">Senior Software Developer with around 7 years of experience in web and mobile applications development using different stacks and libraries such as MEAN, MERN, LAMP, Vue JS, React Native, Laravel, Elastic Search, MySQL and MongoDB, who deliver high quality software, consistently. Have good experience in getting a fresher up to speed, train them on the basics, watch their performance improvement, shaping them and finally pleased on their achievement.</p>
+        </div>
+      </div>
+    </div>
+    <!--FORM-->
+    <div class="homeform">
+      <h3 style="color: royalblue;" id="date">Your last logged in:</h3><br>
+      <p style="font-weight: 900;font-size: 30px;">TO JOIN THE CLASS ENTER THE GIVEN DETAILS</p>
+      <div>
+      <input type="text" class="form3" placeholder="ENTER YOUR NAME" id="name"><br/>
+      <input type="number" class="form3" placeholder="AGE" id="age"><br/>
+      <input type="text" class="form3" placeholder="COLLEGE NAME" id="college"><br/>
+      </diV>
+      <div class="save1 form3"><a target="_blank" href="home.html" id="save" class="save" onclick="get()">Save</a></div>
+      <div>
+        <button id="add" class="btn1 form3" onclick="add()">Add Students</button>
+    </div>
+    </div> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script>
+  var array = [];
+  var date = new Date();
+  document.getElementById("date").innerHTML+=date;
+
+    function get(){
+        var name = document.getElementById('name').value;
+        var newName = name.toUpperCase();
+        var age = document.getElementById('age').value;
+        var college = document.getElementById('college').value;
+        var newCollege = college.toUpperCase();
+        var arr ={
+            name:newName,
+            age:age,
+            college:newCollege,
+        }
+        array.push(arr);
+        console.log(array);
+        localStorage.setItem("studentList",JSON.stringify(array));
+        // window.location.href="studentList.html"
+    }
+</script>
